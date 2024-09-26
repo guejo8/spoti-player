@@ -1,58 +1,38 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 30%, rgba(255, 200, 200, 0.9) 70%);
+   
+}
+
 .login-auth-page {
-    position: absolute;
+    position: relative;
     width: 100vw;
     height: 100vh;
-    background-color: var(--color-4);
     color: var(--color-3);
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    align-content: center;
 }
 
 .login-auth-page .login-auth-wrapper {
-    width: 25%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.login-auth-page .login-social-zone {
-    display: flex;
-    flex-direction: column;
-    gap: .75rem;
-    width: 100%;
-}
-
-.login-auth-page .social-btn {
-    border: 0;
-    padding: .5rem 2rem;
-    width: 100%;
-    font-size: var(--font-size-2);
-    border-radius: var(--border-radius-2);
-    box-shadow: var(--shadow-1);
-    border: solid 1px var(--color-4);
-    background-color: var(--color-4);
-    font-weight: 600;
-}
-
-.login-auth-page .login-social-zone .social-btn.btn-fb {
-    background-color: #3A61B3;
-    color: var(--color-4);
-}
-
-.login-auth-page .login-social-zone .social-btn.btn-apple {
-    background-color: #1a1a1a;
-    color: var(--color-4);
+    width: 30%;
+    padding: 2rem;
+    border-radius: 20px; /* Bordes más redondeados */
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.5), 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra con luz detrás */
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco */
+    border: 2px solid rgba(255, 255, 255, 0.7); /* Borde brillante */
 }
 
 .login-auth-page .separator {
     width: 100%;
     margin: 2rem 0;
     border-bottom: solid 1px var(--color-2);
-    opacity: .2;
+    opacity: 0.3;
 }
 
 .login-auth-page .login-auth-form {
@@ -66,18 +46,26 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    margin-bottom: 1rem;
 }
 
 .login-auth-page .login-auth-form .form-group input {
-    border: solid 1px #e7e7e7;
-    border-radius: var(--border-radius-1);
-    height: 30px;
-    padding: .25rem .5rem;
-    font-size: 90%;
+    border: solid 2px #e7e7e7;
+    border-radius: 20px; /* Bordes redondeados */
+    height: 40px;
+    padding: 0.5rem 1rem; /* Espaciado interno */
+    font-size: 100%;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transición suave */
+}
+
+.login-auth-page .login-auth-form .form-group input:focus {
+    border-color: var(--color-1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    outline: none;
 }
 
 .login-auth-page .login-auth-form label {
-    padding-bottom: .35rem;
+    padding-bottom: .5rem;
     font-weight: 600;
     display: inline-block;
     margin: 0;
@@ -92,6 +80,7 @@
     font-size: 85%;
     font-weight: 500;
     text-decoration: underline;
+    transition: color 0.3s;
 }
 
 .login-auth-page .login-auth-form .form-steps .link:hover {
@@ -101,9 +90,20 @@
 .login-auth-page .login-auth-form .form-action .login {
     color: var(--color-4);
     margin: 1rem 0;
-    background-color: var(--color-1);
+    background-color: var(--color-1); /* Color de fondo original */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Transición suave */
+}
+
+.login-auth-page .login-auth-form .form-action .login:hover {
+    background-color: #32CD32; /* Verde césped */
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Sombra al hacer hover */
 }
 
 input.ng-invalid.ng-touched {
-    border: solid 2px red !important
+    border: solid 2px red !important;
 }
