@@ -15,9 +15,12 @@ export class HistoryPageComponent implements OnInit {
   }
 
   receiveData(event: string): void {
-    //Agarras el termino (term) y sabes que solo se ejecuta si tiene 3 caracteres o mas
-    console.log('Estoy en el padre', event);
-     this.listResults$ = this.searchService.searchTracks$(event)
-
+    if (event.length >= 3) {
+      console.log('Estoy en el padre', event); 
+      this.listResults$ = this.searchService.searchTracks$(event); // Realiza la búsqueda
+    } else {
+      this.listResults$ = of([]); // Si no hay suficientes caracteres, resetea la lista
+    }
   }
+  
 }

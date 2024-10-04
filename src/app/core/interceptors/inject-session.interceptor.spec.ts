@@ -1,17 +1,50 @@
-import { TestBed } from '@angular/core/testing';
-import { HttpInterceptorFn } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import {
+  HttpRequest,
+  HttpHandler,
+  HttpEvent,
+  HttpInterceptor
+} from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { CookieService } from 'ngx-cookie-service';
 
-import { injectSessionInterceptor } from './inject-session.interceptor';
+@Injectable()
+export class InjectSessionInterceptor implements HttpInterceptor {
 
-describe('injectSessionInterceptor', () => {
-  const interceptor: HttpInterceptorFn = (req, next) => 
-    TestBed.runInInjectionContext(() => injectSessionInterceptor(req, next));
+  constructor(private cookieService: CookieService) { }
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-  });
+  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+    try {
+      const token = this.cookieService.get('token')
+      let newRequest = request
+      newRequest = request.clone(
+        {
+          setHeaders: {
+            authorization: `Bearer ${token}`,
+            CUSTOM_HEADER: 'HOLA'
+          }
+        }
+      )
 
-  it('should be created', () => {
-    expect(interceptor).toBeTruthy();
-  });
-});
+      return next.handle(newRequest);
+
+    } catch (e) {
+      console.log('Cuidado, error', e)
+      return next.handle(request);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
