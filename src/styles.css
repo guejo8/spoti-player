@@ -1,9 +1,9 @@
 :root {
-    --color-1: #1A7431; /* Verde oscuro y profundo, manteniendo el tono verde */
---color-2: #301934; /* Morado oscuro, un poco más suave que el más profundo */
---color-3: #1A001F; /* Morado casi negro, muy oscuro */
---color-4: #FFFFFF; /* Blanco  */
---color-5: #2A0E30; /* Morado oscuro, ligeramente más claro que el tono más oscuro */
+    --color-1: #1A7431; /* Verde oscuro y profundo */
+    --color-2: #301934; /* Morado oscuro */
+    --color-3: #1A001F; /* Morado casi negro */
+    --color-4: #FFFFFF; /* Blanco */
+    --color-5: #2A0E30; /* Morado oscuro más claro */
     --font-size-1: 1rem;
     --font-size-2: 1.2rem;
     --font-size-3: 1.8rem;
@@ -15,6 +15,7 @@
     --animation-1: 200ms;
 }
 
+/* Estilos base para todo el sitio */
 html,
 body {
     margin: 0;
@@ -33,4 +34,61 @@ button {
 
 button:disabled {
     opacity: .5;
+}
+
+/* Media Queries para hacer el diseño responsive, pero manteniendo las fuentes */
+@media (max-width: 1024px) {
+    html,
+    body {
+        padding: 0 1rem; /* Añade un poco de espacio para pantallas medianas */
+    }
+
+    .login-auth-page .login-auth-wrapper {
+        width: 50%; /* Ajuste del tamaño del contenedor en pantallas más grandes como tabletas */
+    }
+}
+
+@media (max-width: 768px) {
+    html,
+    body {
+        padding: 0 1rem; /* Espaciado adicional para tabletas */
+    }
+
+    .login-auth-page .login-auth-wrapper {
+        width: 70%; /* Ajusta el tamaño del contenedor en tabletas */
+    }
+
+    .login-auth-page .login-auth-form .form-group input {
+        font-size: 1rem; /* Mantén el tamaño del texto en los inputs */
+    }
+
+    .login-auth-page .login-auth-form .form-action .login {
+        padding: 10px 15px; /* Mantiene un padding adecuado para los botones */
+    }
+}
+
+@media (max-width: 480px) {
+    html,
+    body {
+        padding: 0 0.5rem; /* Ajuste del padding para móviles */
+    }
+
+    .login-auth-page .login-auth-wrapper {
+        width: 90%; /* Aumenta el ancho del contenedor en pantallas pequeñas */
+        padding: 1.5rem;
+    }
+
+    .login-auth-page .login-auth-form .form-group input {
+        height: 40px; /* Mantén la altura de los inputs en móviles */
+        font-size: 1rem; /* Mantén el tamaño del texto legible */
+    }
+
+    .login-auth-page .login-auth-form label {
+        font-size: 1rem; /* Mantén el tamaño de las etiquetas en móviles */
+    }
+
+    .login-auth-page .login-auth-form .form-action .login {
+        font-size: 1rem; /* Mantén el tamaño del texto del botón */
+        padding: 10px 15px; /* Mantén el padding adecuado del botón */
+    }
 }

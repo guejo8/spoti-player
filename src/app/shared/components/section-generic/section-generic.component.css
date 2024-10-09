@@ -10,10 +10,41 @@
     gap: 1.15rem;
 }
 
+/* Estilos por defecto para pantallas grandes */
 .section--generic__player--zone .player--list.card-small {
     grid-template-columns: repeat(5, 1fr);
 }
 
 .section--generic__player--zone .player--list.card-big {
     grid-template-columns: repeat(6, minmax(100px, 1fr));
+}
+
+/* Estilos para tabletas (pantallas hasta 1024px) */
+@media (max-width: 1024px) {
+    .section--generic__player--zone .player--list.card-small {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+
+    .section--generic__player--zone .player--list.card-big {
+        grid-template-columns: repeat(4, minmax(100px, 1fr)); 
+    }
+}
+
+/* Estilos para móviles (pantallas hasta 768px) */
+@media (max-width: 768px) {
+    .section--generic__player--zone .player--list.card-small {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .section--generic__player--zone .player--list.card-big {
+        grid-template-columns: repeat(2, minmax(100px, 1fr)); 
+    }
+}
+
+/* Estilos para móviles muy pequeños (pantallas hasta 480px) */
+@media (max-width: 480px) {
+    .section--generic__player--zone .player--list.card-small,
+    .section--generic__player--zone .player--list.card-big {
+        grid-template-columns: 1fr; 
+    }
 }

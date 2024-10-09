@@ -1,4 +1,34 @@
 .home-wrapper {
-    margin: 0 0 0 17.5rem;
+    margin: 0 0 0 17.5rem; 
     min-height: 100vh;
+}
+
+/* Media Queries  */
+@media (max-width: 1024px) {
+    .home-wrapper {
+        margin: 0 0 0 10rem; 
+    }
+}
+
+@media (max-width: 768px) {
+    .home-wrapper {
+        margin: 0 0 0 5rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .home-wrapper {
+        margin: 0; 
+    }
+
+    
+
+    app-media-player {
+        width: 100%; 
+        margin: 0; 
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 5; 
+    }
 }

@@ -5,7 +5,6 @@ body {
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 30%, rgba(255, 200, 200, 0.9) 70%);
-   
 }
 
 .login-auth-page {
@@ -22,10 +21,11 @@ body {
 .login-auth-page .login-auth-wrapper {
     width: 30%;
     padding: 2rem;
-    border-radius: 20px; /* Bordes más redondeados */
-    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.5), 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra con luz detrás */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.5), 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra */
     background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco */
     border: 2px solid rgba(255, 255, 255, 0.7); /* Borde brillante */
+    transition: all 0.3s ease-in-out;
 }
 
 .login-auth-page .separator {
@@ -90,20 +90,62 @@ body {
 .login-auth-page .login-auth-form .form-action .login {
     color: var(--color-4);
     margin: 1rem 0;
-    background-color: var(--color-1); /* Color de fondo original */
+    background-color: var(--color-1);
     padding: 10px 15px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s; /* Transición suave */
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .login-auth-page .login-auth-form .form-action .login:hover {
-    background-color: #32CD32; /* Verde césped */
+    background-color: #32CD32;
     transform: scale(1.05);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Sombra al hacer hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 input.ng-invalid.ng-touched {
     border: solid 2px red !important;
+}
+
+/* Media queries para dispositivos más pequeños */
+@media (max-width: 1024px) {
+    .login-auth-page .login-auth-wrapper {
+        width: 50%; /* Ajustar para pantallas medianas como tabletas */
+    }
+}
+
+@media (max-width: 768px) {
+    .login-auth-page .login-auth-wrapper {
+        width: 70%; /* Ajustar para pantallas de tabletas pequeñas */
+    }
+
+    .login-auth-page .login-auth-form .form-group input {
+        font-size: 90%; /* Reducir el tamaño del texto */
+    }
+
+    .login-auth-page .login-auth-form .form-action .login {
+        padding: 8px 12px; /* Ajustar el padding del botón */
+    }
+}
+
+@media (max-width: 480px) {
+    .login-auth-page .login-auth-wrapper {
+        width: 90%; /* Ajustar para pantallas móviles */
+        padding: 1.5rem;
+    }
+
+    .login-auth-page .login-auth-form .form-group input {
+        height: 35px; /* Reducir la altura de los campos de input */
+        font-size: 85%;
+    }
+
+    .login-auth-page .login-auth-form label {
+        font-size: 90%; /* Ajustar el tamaño de las etiquetas */
+    }
+
+    .login-auth-page .login-auth-form .form-action .login {
+        font-size: 90%; /* Ajustar el tamaño del texto del botón */
+        padding: 8px 10px; /* Reducir el padding del botón */
+    }
 }

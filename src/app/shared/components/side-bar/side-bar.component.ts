@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,11 +8,13 @@ import { Router } from '@angular/router';
 })
 export class SideBarComponent implements OnInit {
 
+
+
   mainMenu: {
     defaultOptions: Array<any>, accessLink: Array<any>
-  } = { defaultOptions: [], accessLink: [] }
+  } = { defaultOptions: [], accessLink: [] };
 
-  customOptions: Array<any> = []
+  customOptions: Array<any> = [];
 
   constructor(private router: Router) { }
 
@@ -34,7 +36,7 @@ export class SideBarComponent implements OnInit {
         router: ['/', 'favorites'],
         query: { hola: '' }
       }
-    ]
+    ];
 
     this.mainMenu.accessLink = [
       {
@@ -45,7 +47,7 @@ export class SideBarComponent implements OnInit {
         name: 'Canciones que te gustan',
         icon: 'uil-heart-medical'
       }
-    ]
+    ];
 
     this.customOptions = [
       {
@@ -64,8 +66,7 @@ export class SideBarComponent implements OnInit {
         name: 'Mi lista º4',
         router: ['/']
       }
-    ]
-
+    ];
   }
 
   goTo($event: any): void {
@@ -75,7 +76,7 @@ export class SideBarComponent implements OnInit {
         key2: 'value2',
         key3: 'value3'
       }
-    })
-    console.log($event)
+    });
+    console.log($event);
   }
 }
