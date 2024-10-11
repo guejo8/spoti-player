@@ -3,7 +3,7 @@
     min-height: 100vh;
 }
 
-/* Media Queries  */
+/* RESPONSIVE  */
 @media (max-width: 1024px) {
     .home-wrapper {
         margin: 0 0 0 10rem; 

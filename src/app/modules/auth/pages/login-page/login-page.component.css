@@ -21,10 +21,10 @@ body {
 .login-auth-page .login-auth-wrapper {
     width: 30%;
     padding: 2rem;
-    border-radius: 20px; /* Bordes redondeados */
-    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.5), 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra */
-    background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco */
-    border: 2px solid rgba(255, 255, 255, 0.7); /* Borde brillante */
+    border-radius: 20px; 
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.5), 0 4px 20px rgba(0, 0, 0, 0.2); 
+    background-color: rgba(255, 255, 255, 0.95); 
+    border: 2px solid rgba(255, 255, 255, 0.7); 
     transition: all 0.3s ease-in-out;
 }
 
@@ -51,11 +51,11 @@ body {
 
 .login-auth-page .login-auth-form .form-group input {
     border: solid 2px #e7e7e7;
-    border-radius: 20px; /* Bordes redondeados */
+    border-radius: 20px; 
     height: 40px;
-    padding: 0.5rem 1rem; /* Espaciado interno */
+    padding: 0.5rem 1rem; 
     font-size: 100%;
-    transition: border-color 0.3s, box-shadow 0.3s; /* Transición suave */
+    transition: border-color 0.3s, box-shadow 0.3s; 
 }
 
 .login-auth-page .login-auth-form .form-group input:focus {
@@ -108,44 +108,45 @@ input.ng-invalid.ng-touched {
     border: solid 2px red !important;
 }
 
-/* Media queries para dispositivos más pequeños */
+/* RESPONSIVE */
+
 @media (max-width: 1024px) {
     .login-auth-page .login-auth-wrapper {
-        width: 50%; /* Ajustar para pantallas medianas como tabletas */
+        width: 50%; 
     }
 }
 
 @media (max-width: 768px) {
     .login-auth-page .login-auth-wrapper {
-        width: 70%; /* Ajustar para pantallas de tabletas pequeñas */
+        width: 70%; 
     }
 
     .login-auth-page .login-auth-form .form-group input {
-        font-size: 90%; /* Reducir el tamaño del texto */
+        font-size: 90%; 
     }
 
     .login-auth-page .login-auth-form .form-action .login {
-        padding: 8px 12px; /* Ajustar el padding del botón */
+        padding: 8px 12px; 
     }
 }
 
 @media (max-width: 480px) {
     .login-auth-page .login-auth-wrapper {
-        width: 90%; /* Ajustar para pantallas móviles */
+        width: 90%; 
         padding: 1.5rem;
     }
 
     .login-auth-page .login-auth-form .form-group input {
-        height: 35px; /* Reducir la altura de los campos de input */
+        height: 35px; 
         font-size: 85%;
     }
 
     .login-auth-page .login-auth-form label {
-        font-size: 90%; /* Ajustar el tamaño de las etiquetas */
+        font-size: 90%; 
     }
 
     .login-auth-page .login-auth-form .form-action .login {
-        font-size: 90%; /* Ajustar el tamaño del texto del botón */
-        padding: 8px 10px; /* Reducir el padding del botón */
+        font-size: 90%; 
+        padding: 8px 10px; 
     }
 }

@@ -50,7 +50,7 @@
     cursor: pointer;
 }
 
-/* Media Queries */
+/* RESPONSIVE*/
 @media (max-width: 1024px) {
     .side-bar {
         width: 5rem; 

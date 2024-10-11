@@ -14,10 +14,7 @@ export class TrackService {
 
   }
 
-  /**
-   * 
-   * @returns Devolver todas las canciones
-   */
+   // @returns Devolver todas las canciones
 
   private skipById(listTracks: TrackModel[], id: number): Promise<TrackModel[]> {
     return new Promise((resolve, reject) => {
@@ -26,11 +23,7 @@ export class TrackService {
     })
   }
 
-  /**
-   * {data:[..1,...2]}
-   * 
-   * @returns 
-   */
+  
   getAllTracks$(): Observable<any> {
     return this.http.get(`${this.URL}/tracks`)
       .pipe(
@@ -39,12 +32,9 @@ export class TrackService {
         })
       )
   }
-
-
-  /**
-   * 
-   * @returns Devolver canciones random
-   */
+   
+   // @returns Devolver canciones random
+   
   getAllRandom$(): Observable<any> {
     return this.http.get(`${this.URL}/tracks`)
       .pipe(

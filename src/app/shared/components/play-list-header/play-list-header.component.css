@@ -56,7 +56,7 @@
     padding-left: .5rem;
 }
 
-/* Media Queries */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .play-list-header {
         flex-direction: column; 
