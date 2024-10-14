@@ -15,11 +15,11 @@ describe('CardPlayerComponent', () => {
     const multimediaSpy = jasmine.createSpyObj('MultimediaService', ['trackInfo$']);
 
     await TestBed.configureTestingModule({
-      declarations: [CardPlayerComponent],
-      providers: [
+    imports: [CardPlayerComponent],
+    providers: [
         { provide: MultimediaService, useValue: multimediaSpy }
-      ]
-    })
+    ]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(CardPlayerComponent);

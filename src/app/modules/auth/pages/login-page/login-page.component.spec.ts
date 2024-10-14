@@ -23,17 +23,17 @@ describe('LoginPageComponent', () => {
 
     // Configurar el módulo de prueba, importando los módulos necesarios y proporcionando los mocks
     await TestBed.configureTestingModule({
-      declarations: [LoginPageComponent], 
-      imports: [
-        HttpClientTestingModule,  
-        ReactiveFormsModule       
-      ],
-      providers: [
-        { provide: AuthService, useValue: authServiceMock },  
-        { provide: CookieService, useValue: cookieServiceMock }, 
-        { provide: Router, useValue: routerMock }  
-      ]
-    }).compileComponents(); // Compilar el componente y sus dependencias
+    imports: [
+        HttpClientTestingModule,
+        ReactiveFormsModule,
+        LoginPageComponent
+    ],
+    providers: [
+        { provide: AuthService, useValue: authServiceMock },
+        { provide: CookieService, useValue: cookieServiceMock },
+        { provide: Router, useValue: routerMock }
+    ]
+}).compileComponents(); // Compilar el componente y sus dependencias
     
     // Crear la instancia del componente y asignarla a la variable 'component'
     fixture = TestBed.createComponent(LoginPageComponent);

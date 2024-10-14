@@ -3,18 +3,15 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { TracksRoutingModule } from './tracks-routing.module';
 import { TracksPageComponent } from './pages/tracks-page/tracks-page.component';
-import { SharedModule } from '@shared/shared.module';
+
 
 
 @NgModule({
-  declarations: [
-    TracksPageComponent
-  ],
-  imports: [
+    imports: [
     CommonModule,
     TracksRoutingModule,
-    SharedModule,
-    HttpClientModule
-  ]
+    HttpClientModule,
+    TracksPageComponent
+]
 })
 export class TracksModule { }

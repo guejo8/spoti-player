@@ -8,9 +8,9 @@ describe('PagesFavoriteComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PagesFavoriteComponent ],
-      schemas: [ NO_ERRORS_SCHEMA ] // Agregar esto para suprimir errores de elementos desconocidos
-    })
+    imports: [PagesFavoriteComponent],
+    schemas: [NO_ERRORS_SCHEMA] // Agregar esto para suprimir errores de elementos desconocidos
+})
     .compileComponents();
   });
 

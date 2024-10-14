@@ -1,13 +1,16 @@
 import { Component, OnDestroy, OnInit, ViewChild, ElementRef } from '@angular/core'; 
 import { TrackModel } from '@core/models/tracks.model'; 
 import { MultimediaService } from '@shared/services/multimedia.service'; 
-import { Subscription } from 'rxjs'; 
+import { Subscription } from 'rxjs';
+import { NgTemplateOutlet, NgIf, NgClass, AsyncPipe } from '@angular/common'; 
 
 
 @Component({
-  selector: 'app-media-player', 
-  templateUrl: './media-player.component.html', 
-  styleUrls: ['./media-player.component.css'] 
+    selector: 'app-media-player',
+    templateUrl: './media-player.component.html',
+    styleUrls: ['./media-player.component.css'],
+    standalone: true,
+    imports: [NgTemplateOutlet, NgIf, NgClass, AsyncPipe]
 })
 export class MediaPlayerComponent implements OnInit, OnDestroy {
   @ViewChild('progressBar') progressBar: ElementRef = new ElementRef(''); // Referencia al elemento de la barra de progreso

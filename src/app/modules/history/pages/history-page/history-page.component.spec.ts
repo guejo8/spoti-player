@@ -17,19 +17,17 @@ describe('HistoryPageComponent', () => {
     const searchServiceSpy = jasmine.createSpyObj('SearchService', ['searchTracks$']);
     
     await TestBed.configureTestingModule({
-      imports: [
-        HttpClientTestingModule, 
-        FormsModule,             
-        SharedModule             
-      ],
-      declarations: [
-        HistoryPageComponent,   
-        SearchComponent         
-      ],
-      providers: [
+    imports: [
+        HttpClientTestingModule,
+        FormsModule,
+        SharedModule,
+        HistoryPageComponent,
+        SearchComponent
+    ],
+    providers: [
         { provide: SearchService, useValue: searchServiceSpy } // Proporcionamos el espía como servicio
-      ]
-    })
+    ]
+})
     .compileComponents();
     
     // Inyectamos el espía del SearchService para usarlo en las pruebas

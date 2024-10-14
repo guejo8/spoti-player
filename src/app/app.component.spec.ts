@@ -8,11 +8,11 @@ describe('AppComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule.withRoutes([]) 
-      ],
-      declarations: [AppComponent],
-    }).compileComponents();
+    imports: [
+        RouterTestingModule.withRoutes([]),
+        AppComponent
+    ],
+}).compileComponents();
   });
 
   beforeEach(() => {

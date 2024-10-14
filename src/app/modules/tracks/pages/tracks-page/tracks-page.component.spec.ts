@@ -10,13 +10,12 @@ describe('TracksPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        HttpClientTestingModule,  
-        SharedModule              
-      ],
-      declarations: [TracksPageComponent],
-      
-    })
+    imports: [
+        HttpClientTestingModule,
+        SharedModule,
+        TracksPageComponent
+    ],
+})
     .compileComponents();  // Compila el componente y las dependencias
   });
 

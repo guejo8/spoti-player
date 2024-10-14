@@ -10,12 +10,10 @@ describe('PlayListBodyComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ 
-        PlayListBodyComponent,
-        OrderListPipe 
-      ],
-      schemas: [ NO_ERRORS_SCHEMA ] // Esto es opcional
-    })
+    imports: [PlayListBodyComponent,
+        OrderListPipe],
+    schemas: [NO_ERRORS_SCHEMA] // Esto es opcional
+})
     .compileComponents();
     
     fixture = TestBed.createComponent(PlayListBodyComponent);
