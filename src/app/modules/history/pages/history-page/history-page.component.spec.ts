@@ -3,9 +3,8 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { FormsModule } from '@angular/forms'; 
 import { HistoryPageComponent } from './history-page.component';
 import { SearchComponent } from 'src/app/modules/history/components/search/search.component'; 
-import { SharedModule } from 'src/app/shared/shared.module'; 
-import { SearchService } from '@modules/history/services/search.service';
 import { of } from 'rxjs';
+import { SearchService } from '@modules/history/services/search.service';
 
 describe('HistoryPageComponent', () => {
   let component: HistoryPageComponent;
@@ -20,7 +19,7 @@ describe('HistoryPageComponent', () => {
     imports: [
         HttpClientTestingModule,
         FormsModule,
-        SharedModule,
+        
         HistoryPageComponent,
         SearchComponent
     ],
